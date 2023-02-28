@@ -4,11 +4,17 @@
 
 Functions to calculate angles related to the position of the Sun and horizon at a given location on the Earth.
 
-## `SEA = solarelevationangle(time, latitude, longitude, timezone)`
+## Solar elevation and zenith angles
+```
+SEA = solarelevationangle(time, latitude, longitude, timezone)
+SZA = solarzenithangle(time, latitude, longitude, timezone)
+```
 
-Calculates the angle of the Sun from the horizontal, in degrees, at a given location.  Negative solar elevation angle indicates the center of the Sun is below the local horizontal.
+Calculate the angle of the Sun from the horizontal (elevation) and vertical (zenith), in degrees, at a given location.  Negative solar elevation angle, or solar zenith angle greater than 90 degrees, indicates the center of the Sun is below the local horizontal.  
 
-`solarelevationangle()` calls the `SolarAngles` functions `localsolartime()` and `solarhourangle()`.
+Note that solar zenith angle  = 90 degrees - solar elevation angle.
+
+Both these functions call `solarhourangle`, which itself calls `localsolartime`.
 
 ### inputs:
 | name | units |
@@ -24,8 +30,12 @@ Calculates the angle of the Sun from the horizontal, in degrees, at a given loca
 | name | units |
 | --- | --- |
 | SEA | degrees |
+| SZA | degrees |
 
-## `HD = horizondip(altitude, refraction)`
+## Horizon dip angle
+```
+HD = horizondip(altitude, refraction)
+```
 
 Calculates the dip angle of the horizon from the horizontal, assuming a uniform spherical Earth.  Positive horizon dip angle incidates the horizon is below the local horizontal, as expected for an observer standing on a mountaintop or riding on a balloon.
 
