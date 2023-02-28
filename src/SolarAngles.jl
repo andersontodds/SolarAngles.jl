@@ -10,6 +10,7 @@ export horizondip
 include("LocalSolarTime.jl");
 include("SolarHourAngle.jl");
 include("SolarElevationAngle.jl");
+include("SolarZenithAngle.jl");
 include("LocalSolarTime.jl");
 
 end
