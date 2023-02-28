@@ -5,6 +5,7 @@ using Dates
 export localsolartime
 export solarhourangle
 export solarelevationangle
+export solarzenithangle
 export horizondip
 
 include("LocalSolarTime.jl");
