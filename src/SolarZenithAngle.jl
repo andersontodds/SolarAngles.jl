@@ -8,9 +8,7 @@ function solarzenithangle(time, latitude, longitude, timezone=0)
     # timezone: time zone (interger hour GMT offset) for input time; leave blank if time is in UT
 
     # Outputs:
-    # SZA: solare elevation angle in degrees
-    
-    import("SolarElevationAngle.jl")
+    # SZA: solare zenith angle in degrees
 
     SEA = solarelevationangle(time, latitude, longitude, timezone);
     SZA = 90 - SEA;
