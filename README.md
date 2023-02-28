@@ -33,7 +33,7 @@ Calculates the dip angle of the horizon from the horizontal, assuming a uniform 
 | name | units |
 | --- | --- |
 | altitude | meters |
-| refraction* | unitless** |
+| refraction* | unitless**; default 0 |
 
 \*optional input
 
